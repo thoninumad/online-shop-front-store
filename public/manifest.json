@@ -1,20 +1,35 @@
 {
-  "name": "vueshop",
-  "short_name": "vueshop",
+  "name": "PIPPO",
+  "short_name": "PIPPO",
   "icons": [
     {
-      "src": "./img/icons/android-chrome-192x192.png",
-      "sizes": "192x192",
+      "src": "./img/icons/logo-128.png",
+      "sizes": "128x84",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/android-chrome-512x512.png",
-      "sizes": "512x512",
+      "src": "./img/icons/logo-144.png",
+      "sizes": "144x95",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/logo-152.png",
+      "sizes": "152x100",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/logo-192.png",
+      "sizes": "192x126",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/logo-512.png",
+      "sizes": "512x337",
       "type": "image/png"
     }
   ],
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "theme_color": "#ECECEC"
 }
