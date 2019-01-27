@@ -1,5 +1,4 @@
-# vueshop
-
+# Online Shop Front Store
 ## Project setup
 ```
 npm install
