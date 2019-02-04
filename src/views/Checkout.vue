@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <v-subheader>Shipping Address</v-subheader>
+    <div class="checkout" style="margin-top:65px;">
+        <v-subheader class="sub-title">Shipping Address</v-subheader>
         <div>
             <v-card flat>
                 <v-container>
@@ -14,7 +14,7 @@
                         persistent-hint single-line></v-select>
                     </v-form>
                     <v-card-actions>
-                        <v-btn color="success" dark @click="saveShipping">
+                        <v-btn block color="#bd1544" dark @click="saveShipping">
                             <v-icon>save</v-icon> &nbsp;
                             Save
                         </v-btn>
@@ -23,7 +23,7 @@
             </v-card>
         </div>
 
-        <v-subheader>Your Shopping Cart</v-subheader>
+        <v-subheader class="sub-title">Your Shopping Cart</v-subheader>
         <div v-if="countCart>0">
             <v-card flat>
                 <v-list two-line>
@@ -58,7 +58,7 @@
             </v-card>
         </div>
 
-        <v-subheader>Courier</v-subheader>
+        <v-subheader class="sub-title">Courier</v-subheader>
         <div>
             <v-card flat>
                 <v-container>
@@ -76,17 +76,17 @@
             </v-card>
         </div>
 
-        <v-subheader>Total</v-subheader>
+        <v-subheader class="sub-title">Total</v-subheader>
         <v-card>
             <v-container>
                 <v-layout row wrap>
-                    <v-flex xs6 text-xs-center>
+                    <v-flex xs12 text-xs-center>
                         Total Bill ({{totalQuantity}} items)
-                        <div class="title">{{totalBill.toLocaleString('id-ID')}}</div>
+                        <div class="title">Rp.{{totalBill.toLocaleString('id-ID')}}</div>
                     </v-flex>
-                    <v-flex xs6 text-xs-center>
-                        <v-btn color="orange" @click="dialogConfirm=true" :disabled="totalBill==0">
-                            <v-icon light>attach_money</v-icon> &nbsp;
+                    <v-flex xs12 text-xs-center>
+                        <v-btn style="margin:30px 0px;" block color="#bd1544" dark @click="dialogConfirm=true" :disabled="totalBill==0">
+                            <v-icon class="white--text">attach_money</v-icon> &nbsp;
                             Pay
                         </v-btn>
                     </v-flex>
@@ -111,6 +111,10 @@
         </template>
     </div>
 </template>
+
+<style lang="css">
+  @import '/css/main.css';
+</style>
 
 <script>
     import { mapGetters, mapActions } from 'vuex'

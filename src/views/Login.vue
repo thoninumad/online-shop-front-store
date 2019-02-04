@@ -1,7 +1,7 @@
 <template>
-    <v-card>
-        <v-toolbar dark color="primary">
-            <v-btn icon dark @click="close">
+    <v-card class="main">
+        <v-toolbar color="#fff">
+            <v-btn icon  @click="close">
                 <v-icon>close</v-icon>
             </v-btn>
             <v-toolbar-title>Login and Start Shopping!</v-toolbar-title>
@@ -16,7 +16,7 @@
                 counter @click:append="showPassword = !showPassword"></v-text-field>
 
                 <div class="text-xs-center">
-                    <v-btn color="accent lighten-1" :disabled="!valid" @click="submit">
+                    <v-btn large color="#bd1544" :disabled="!valid" @click="submit" class="white--text">
                         Login <v-icon right dark>lock_open</v-icon>
                     </v-btn>
                 </div>
@@ -24,6 +24,10 @@
         </v-container>
     </v-card>
 </template>
+
+<style lang="css">
+  @import '/css/main.css';
+</style>
 
 <script>
     import { mapGetters, mapActions } from 'vuex'

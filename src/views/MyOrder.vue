@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="my-order">
         <v-container>
             <v-list two-line v-if="items.length>0">
                 <template v-for="item in items">
@@ -19,6 +19,10 @@
         </v-container>
     </div>
 </template>
+
+<style lang="css">
+  @import '/css/main.css';
+</style>
 
 <script>
     import { mapGetters, mapActions } from 'vuex'

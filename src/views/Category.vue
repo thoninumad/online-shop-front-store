@@ -1,54 +1,41 @@
 <template>
-    <div>
+    <div class="main category">
         <v-container grid-list-md>
-            <v-subheader>
-                {{category.name}}
-            </v-subheader>
 
-            <v-img v-if="category.image" :src="getImage(category.image)" height="150px"></v-img>
+            <v-img v-if="category.image" :src="getImage(category.image)" height="300px">
+              <v-container fill-height fluid pa-2>
+                <v-layout fill-height align-center>
+                  <v-flex xs12 align-end flexbox class="catagory-content">
+                    <p class="category-title">{{category.name}}</p>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-img>
             <v-subheader>Products by "{{category.name}}" category"</v-subheader>
 
             <v-layout row wrap>
-                <v-flex v-for="product in products" xs6 lg3 :key="product.id">
-                    <v-card :to="'/product/'+product.slug">
-                        <v-img :src="getImage(product.image)" height="150px">
-                            <v-container fill-height fluid pa-2>
-                                <v-layout fill-height>
-                                    <v-flex xs12 align-end flexbox>
-                                        <span class="title white--text text-block" v-text="product.name"></span>
-                                    </v-flex>
-                                </v-layout>
-                            </v-container>
-                        </v-img>
+        <v-flex v-for="(product, index) in products" xs6 lg3 :key="index" >
+          <v-card :to="'/product/'+product.slug" color="transparent" height="100%" class="main-card" >
+            <v-img :to="'/product/'+product.slug" :src="getImage(product.image)" height="150px" color="transparent"></v-img>
+                  <v-flex xs12 align-center flexbox>
+                    <p class="black--text text-block" v-text="product.name"></p>
+                    <p>Rp. {{product.price.toLocaleString('id-ID')}}</p>
+                  </v-flex>
+          </v-card>
+        </v-flex>
+      </v-layout>
 
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-subheader>Rp. {{product.price.toLocaleString('id-ID')}} </v-subheader>
-                        </v-card-actions>
-                    </v-card>
-                </v-flex>
-            </v-layout>
-
-            <template>
+            <v-container>
                 <div class="text-xs-center">
                     <v-pagination v-model="page" @input="go" :length="lengthPage" :total-visible="5"></v-pagination>
                 </div>
-            </template>
+            </v-container>
         </v-container>
     </div>
 </template>
 
-<style scoped>
-.text-block {
-    position:absolute;
-    bottom:5px;
-    left:5px;
-    background-color: black;
-    padding-left: 5px;
-    padding-right: 5px;
-    opacity: 0.7;
-    width:100%;
-}
+<style lang="css">
+  @import '/css/main.css';
 </style>
 
 <script>

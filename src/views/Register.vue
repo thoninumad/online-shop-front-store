@@ -1,7 +1,7 @@
 <template>
     <v-card>
-        <v-toolbar dark color="primary">
-            <v-btn icon dark @click.native="close">
+        <v-toolbar color="#fff">
+            <v-btn icon @click.native="close">
                 <v-icon>close</v-icon>
             </v-btn>
             <v-toolbar-title>Register and Start Shopping!</v-toolbar-title>
@@ -23,15 +23,19 @@
                 <v-checkbox v-model="checkbox" :rules="[v => !!v || 'You must agree to continue!']" label="Do you agree with our Privacy Policy?" required></v-checkbox>
 
                 <div class="text-xs-center">
-                    <v-btn color="primary" :disabled="!valid" @click="submit">
-                        submit <v-icon right dark>person_add</v-icon>
+                    <v-btn large color="#bd1544" :disabled="!valid" @click="submit" class="white--text">
+                        submit <v-icon right >person_add</v-icon>
                     </v-btn>
-                    <v-btn @click="clear">clear</v-btn>
+                    <v-btn large @click="clear">clear</v-btn>
                 </div>
             </v-form>
         </v-container>
     </v-card>
 </template>
+
+<style lang="css">
+  @import '/css/main.css';
+</style>
 
 <script>
     import { mapGetters, mapActions } from 'vuex'

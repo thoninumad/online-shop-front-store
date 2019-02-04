@@ -1,16 +1,15 @@
-<template>
-    <v-card>
-        <v-toolbar dark color="primary">
-            <v-btn icon dark @click="close">
+<template class="main-cart">
+    <v-card class="main">
+        <v-toolbar color="#fff">
+            <v-btn icon @click="close">
                 <v-icon>close</v-icon>
             </v-btn>
 
             <v-toolbar-title>Your Shopping Cart</v-toolbar-title>
             <v-spacer/>
         </v-toolbar>
-        <v-divider></v-divider>
         <div v-if="countCart===0">
-            <v-alert value="true" color="success" icon="new_releases">Keranjang belanja kosong!</v-alert>
+            <v-alert value="true" color="#f5f5f5" class="black--text" icon="new_releases">Keranjang belanja kosong!</v-alert>
         </div>
         <div v-else>
             <v-list two-line>
@@ -51,7 +50,7 @@
                         <div class="title">{{totalPrice.toLocaleString('id-ID')}}</div>
                     </v-flex>
                     <v-flex xs6 text-xs-center>
-                        <v-btn color="orange" dark @click="checkout">
+                        <v-btn color="#bd1544" dark @click="checkout">
                             <v-icon>check_circle</v-icon> &nbsp;
                             Checkout
                         </v-btn>
@@ -61,6 +60,10 @@
         </div>
     </v-card>
 </template>
+
+<style lang="css">
+  @import '/css/main.css';
+</style>
 
 <script>
     import { mapGetters, mapActions } from 'vuex'

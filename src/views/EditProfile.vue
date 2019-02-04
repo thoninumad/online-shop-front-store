@@ -1,6 +1,6 @@
 <template>
-    <v-card>
-        <v-toolbar dark color="primary">
+    <v-card class="main">
+        <v-toolbar dark color="#bd1544">
             <v-btn icon dark @click="close">
                 <v-icon>close</v-icon>
             </v-btn>
@@ -25,14 +25,18 @@
                 <input type="file" style="display: none" ref="image" accept="image/*" @change="onFilePicked">
 
                 <div class="text-xs-center">
-                    <v-btn color="primary" @click="update">
-                        update <v-icon right dark>update</v-icon>
+                    <v-btn large color="#bd1544" class="white--text" @click="update">
+                        simpan
                     </v-btn>
                 </div>
             </v-form>
         </v-container>
     </v-card>
 </template>
+
+<style lang="css">
+  @import '/css/main.css';
+</style>
 
 <script>
     import { mapGetters, mapActions } from 'vuex'

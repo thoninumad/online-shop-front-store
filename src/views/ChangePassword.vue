@@ -1,6 +1,6 @@
 <template>
     <v-card>
-        <v-toolbar dark color="primary">
+        <v-toolbar dark color="#bd1544">
             <v-btn icon dark @click="close">
                 <v-icon>close</v-icon>
             </v-btn>
@@ -21,14 +21,18 @@
                 counter @click:append="showPassword = !showPassword"></v-text-field>
 
                 <div class="text-xs-center">
-                    <v-btn color="primary" :disabled="!valid" @click="update">
-                        update password <v-icon right dark>update</v-icon>
+                    <v-btn color="#bd1544" :disabled="!valid" @click="update" class="white--text" large>
+                        simpan
                     </v-btn>
                 </div>
             </v-form>
         </v-container>
     </v-card>
 </template>
+
+<style lang="css">
+  @import '/css/main.css';
+</style>
 
 <script>
     import { mapGetters, mapActions } from 'vuex'

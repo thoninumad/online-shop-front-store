@@ -1,6 +1,6 @@
 <template>
     <div class="payment">
-        <v-subheader>Payment Information</v-subheader>
+        <v-subheader class="sub-title">Payment Information</v-subheader>
         <v-card flat>
             <v-container>
                 <table class="v-datatable v-table table-hover">
@@ -13,7 +13,7 @@
             </v-container>
         </v-card>
 
-        <v-subheader>Transfer To</v-subheader>
+        <v-subheader class="sub-title">Transfer To</v-subheader>
         <v-card flat>
             <v-container>
                 <table class="v-datatable v-table table-hover">
@@ -36,13 +36,17 @@
             <v-container>
                 <v-layout row wrap>
                     <v-flex xs12 text-xs-center>
-                        <v-btn color="success" @click="finish">Finish</v-btn>
+                        <v-btn block color="#bd1544" class="white--text" @click="finish">Finish</v-btn>
                     </v-flex>
                 </v-layout>
             </v-container>
         </v-card>
     </div>
 </template>
+
+<style lang="css">
+  @import '/css/main.css';
+</style>
 
 <script>
     import { mapGetters } from 'vuex'

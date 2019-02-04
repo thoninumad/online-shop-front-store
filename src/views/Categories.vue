@@ -36,17 +36,8 @@
     </div>
 </template>
 
-<style scoped>
-.text-block {
-    position:absolute;
-    bottom:5px;
-    left:5px;
-    background-color: black;
-    padding-left: 5px;
-    padding-right: 5px;
-    opacity: 0.7;
-    width:100%;
-}
+<style lang="css">
+  @import '/css/main.css';
 </style>
 
 <script>
