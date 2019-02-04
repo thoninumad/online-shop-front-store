@@ -1,1 +1,151 @@
 
+  .main {
+    font-family: "Poppins", sans-serif;
+  }
+  .main-products{
+      margin-top: 90px;
+  }
+  .main-cart{
+      background-color: #f5f5f5;
+  }
+  .home{
+    margin-top: 60px;
+  }
+  .about {
+    margin:90px 0 40px;
+  }
+  .about .main-title {
+    font-size:35px;
+    font-weight:700;
+    margin-bottom:30px;
+  }
+  .checkout{
+      margin-top:80px;
+  }
+  .checkout .sub-title{
+    font-size: 17px;
+    color: #000;
+  }
+  .payment{
+      margin-top: 65px;
+  }
+  .payment .sub-title{
+    font-size: 17px;
+    color: #000;
+  }
+  .category{
+      margin-top: 40px;
+  }
+  .category .category-title{
+    font-size:50px;
+    color:#fff;
+    font-weight:600;
+  }
+  .my-order{
+    margin-top:60px;
+  }
+  h1,h2{
+    color: #fff;
+    font-weight: 7px;
+  }
+  .text-block{
+    font-size: 17px;
+    font-weight:700;
+  }
+  .desc-header{
+    margin-top: 15px;
+  }
+  .desc-header > h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .catagory-content{
+    text-align: center;
+  }
+  .catagory {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  .catagory:hover {
+    color:#bd1544;
+    transition-duration: 300ms;
+  }
+  .img-carousel{
+      text-align: center;
+      background-color: #000;
+  }
+  .img-carousel h1{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.7;
+  }
+  .main-container{
+    margin-top: 70px;
+    width: 100%;
+  }
+  .card-random {
+    width: 97%;
+  }
+  .img-category::after {
+  background-color: rgba(255, 255, 255, 0.4);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  }
+  .main-product{
+    margin-top: 60px;
+  }
+  .main-title{
+    color:#000;
+    text-align:center;
+    margin-bottom:40px;
+    font-weight: 900;
+  }
+  .btn-product{
+    text-align:center;
+    margin-top:35px;
+    margin-bottom: 30px;
+  }
+  .main-card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  .main-logo{
+    width:2%;
+    margin-left:30px;
+  }
+  @media only screen and (max-width: 667px){
+    .main-logo {
+    width: 8%;
+    margin-left: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 640px){
+    .desc-header{
+      width: 50%;
+    }
+    .desc-header h1 {
+    font-size: 35px;
+    line-height: 1.2;
+    }
+    .desc-header h2 {
+      font-size: 15px;
+      }
+  }
+  @media only screen and (max-width: 1280px){
+    .desc-header{
+      width: 90%;
+    }
+    .desc-header h1 {
+      font-size: 38px;
+      line-height: 1.2;
+      }
+  }
+  
+   
