@@ -1,17 +1,17 @@
 <template>
-    <v-footer dark height="auto">
+    <v-footer dark height="auto" color="f5f5f5">
         <v-flex xs12>
-            <v-card flat tile class="secondary darken-1 white--text text-xs-center">
+            <v-card flat tile class="black--text text-xs-center" color="#f5f5f5" style="border-top: 1px solid #e4d9d9;">
 
                 <!-- menu icon media sosial -->
                 <v-card-text v-if="isHome">
-                    <v-btn v-for="social in socials" :key="social" :href="social.url" target="_blank" class="mx-3 white--text" icon>
+                    <v-btn v-for="social in socials" :key="social" :href="social.url" target="_blank" class="mx-3 black--text" icon>
                         <v-icon size="24px">{{social.logo}}</v-icon>
                     </v-btn>
                 </v-card-text>
 
                 <!-- deskripsi aplikasi -->
-                <v-card-text v-if="isHome" class="white--text pt-0">
+                <v-card-text v-if="isHome" class="black--text pt-0">
                     Pusat Inovasi dan Pengujian Produk Otomotif <br>
                     Lembaga Bengkel Mahasiswa Mesin  <br>
                     Kampus ITS Sukolilo, Surabaya 60111
@@ -19,7 +19,7 @@
 
                 <v-layout justify-center row wrap>
                     <!-- link menu halaman aplikasi -->
-                    <v-btn v-for="link in links" :key="link" :href="link.route" :to="{name: link.route}" color="white" flat round>{{link.title}}</v-btn>
+                    <v-btn v-for="link in links" :key="link" :href="link.route" :to="{name: link.route}" color="black" flat round>{{link.title}}</v-btn>
 
                     <!-- teks copyright -->
                     <v-flex secondary darken-2 py-3 text-xs-center white--text xs12>

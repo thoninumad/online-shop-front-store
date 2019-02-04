@@ -1,23 +1,23 @@
 <template>
-    <v-navigation-drawer v-model="drawer" absolute fixed clipped>
+    <v-navigation-drawer v-model="drawer" fixed clipped>
         <!-- header toolbar pada sidebar supaya lebih cantik -->
-        <v-toolbar dark color="primary">
-            <v-btn icon dark @click="drawer=false">
-                <v-icon>close</v-icon>
+        <v-toolbar color="#fff">
+            <v-btn icon @click="drawer=false">
+                <v-icon color="#000">close</v-icon>
             </v-btn>
-            <v-toolbar-title>Vueshop</v-toolbar-title>
+            <v-toolbar-title class="black--text">Vueshop</v-toolbar-title>
         </v-toolbar>
 
         <v-list v-if="guest">
             <v-list-tile>
                 <!-- tombol register -->
-                <v-btn @click="register()" depressed block round color="secondary" class="white--text">
+                <v-btn @click="register()" depressed block round color="#e4d9d9" class="black--text">
                     Register <v-icon right dark>person_add</v-icon>
                 </v-btn>
             </v-list-tile>
             <v-list-tile>
                 <!-- tombol login -->
-                <v-btn @click="login()" block round depressed color="accent lighten-1" class="white--text">
+                <v-btn @click="login()" block round depressed color="#bd1544" class="white--text">
                     Login <v-icon right dark>lock_open</v-icon>
                 </v-btn>
             </v-list-tile>
@@ -35,7 +35,7 @@
             </v-list-tile>
 
             <v-list-tile>
-                <v-btn block small round depressed color="error lighten-1" class="white--text" @click.stop="logout();">
+                <v-btn block round depressed color="#bd1544" class="white--text" @click.stop="logout();">
                     Logout <v-icon small right dark>settings_power</v-icon>
                 </v-btn>
             </v-list-tile>
@@ -45,9 +45,9 @@
             <v-divider></v-divider>
             <!-- menu navigasi pada properti data items -->
             <!-- eslint-disable-next-line -->
-            <v-list-tile v-for="(item, index) in items" :key="index" :href="item.route" :to="{name: item.route}" v-if="!item.auth || (item.auth && !guest)">
+            <v-list-tile v-for="(item, index) in items" :key="index" :href="item.route" :to="{name: item.route}">
                 <v-list-tile-action>
-                    <v-icon>{{item.icon}}</v-icon>
+                    <v-icon color="#a29999">{{item.icon}}</v-icon>
                 </v-list-tile-action>
 
                 <v-list-tile-content>

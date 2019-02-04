@@ -1,63 +1,71 @@
 <template>
-    <!-- toolbar vuetify dengan warna primary -->
-    <v-toolbar dark color="primary">
+  <!-- toolbar vuetify dengan warna primary -->
+  <v-toolbar fixed color="#fff">
+    <!-- header bagian kiri -->
+    <v-toolbar-side-icon v-if="isHome" @click="setSideBar(!sideBar)" ></v-toolbar-side-icon>
+    <v-btn v-if="!isHome" icon @click="$router.go(-1)" >
+      <v-icon>arrow_back</v-icon>
+    </v-btn>
 
-        <!-- header bagian kiri -->
-        <v-toolbar-side-icon v-if="isHome" @click="setSideBar(!sideBar)"></v-toolbar-side-icon>
-        <v-btn v-if="!isHome" icon @click="$router.go(-1)">
-            <v-icon>arrow_back</v-icon>
-        </v-btn>
+    <!-- header bagian tengah -->
+    <img class="main-logo" src="/img/icons/logo-128.png" alt="">
 
-        <!-- header bagian tengah -->
-        <v-toolbar-title class="white--text">{{appName}}</v-toolbar-title>
+    <!-- separator supaya header bagian kanan posisinya rata kanan -->
+    <v-spacer></v-spacer>
 
-        <!-- separator supaya header bagian kanan posisinya rata kanan -->
-        <v-spacer></v-spacer>
+     <v-btn icon @click="search()">
+        <v-icon>search</v-icon>
+    </v-btn>
 
-        <!-- header bagian kanan -->
-        <v-btn icon @click="cart()">
-            <v-badge left overlap color="orange">
-                <span slot="badge" v-if="countCart>0">{{countCart}}</span>
-                <v-icon>shopping_cart</v-icon>
-            </v-badge>
-        </v-btn>
+    <!-- header bagian kanan -->
+    <v-btn icon @click="cart()">
+      <v-badge left overlap color="#c83131">
+        <span slot="badge" v-if="countCart>0">{{countCart}}</span>
+        <v-icon>shopping_cart</v-icon>
+      </v-badge>
+    </v-btn>
 
-        <!-- kolom pencarian di bawah header -->
-        <v-text-field v-if="isHome" @click="search()" slot="extension" hide-details append-icon="mic"
-        flat label="Search" prepend-inner-icon="search" solo-inverted></v-text-field>
+    <!-- kolom pencarian di bawah header -->
+    
+  </v-toolbar>
 
-    </v-toolbar>
 </template>
 
+<style lang="css">
+  @import '/css/main.css';
+</style>
+
+</style>
+
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from "vuex";
 export default {
-    name : 'c-header',
-    methods : {
-        ...mapActions({
-            setSideBar : 'setSideBar',
-            setStatusDialog : 'dialog/setStatus',
-            setComponent : 'dialog/setComponent',
-        }),
-        search() {
-            this.setStatusDialog(true)
-            this.setComponent('search')
-            this.setSideBar(false)
-        },
-        cart() {
-            this.setStatusDialog(true)
-            this.setComponent('cart')
-            this.setSideBar(false)
-        },
+  name: "c-header",
+  methods: {
+    ...mapActions({
+      setSideBar: "setSideBar",
+      setStatusDialog: "dialog/setStatus",
+      setComponent: "dialog/setComponent"
+    }),
+    search() {
+      this.setStatusDialog(true);
+      this.setComponent("search");
+      this.setSideBar(false);
     },
-    computed : {
-        ...mapGetters({
-            sideBar : 'sideBar',
-            countCart : 'cart/count'
-        }),
-        isHome() {
-            return (this.$route.path==='/')
-        },
+    cart() {
+      this.setStatusDialog(true);
+      this.setComponent("cart");
+      this.setSideBar(false);
     }
-}
+  },
+  computed: {
+    ...mapGetters({
+      sideBar: "sideBar",
+      countCart: "cart/count"
+    }),
+    isHome() {
+      return this.$route.path === "/";
+    }
+  }
+};
 </script>
