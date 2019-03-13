@@ -28,8 +28,29 @@
                 </v-layout>
             </v-card>
         </v-flex>
+
+        <v-btn class="floating-button"
+                v-show="!hidden"
+                color="#4ec248"
+                dark
+                absolute
+                bottom
+                right
+                fab
+              >
+                <v-icon>phone</v-icon>
+              </v-btn>
     </v-footer>
 </template>
+
+<style scoped>
+  .floating-button{
+      position: fixed;
+    bottom: 0;
+    right: 0;
+    margin:20px;
+  }
+</style>
 
 <script>
     export default {
