@@ -5,7 +5,7 @@
             <v-btn icon @click="drawer=false">
                 <v-icon color="#000">close</v-icon>
             </v-btn>
-            <v-toolbar-title class="black--text">Vueshop</v-toolbar-title>
+            <v-toolbar-title class="black--text">PIPPO</v-toolbar-title>
         </v-toolbar>
 
         <v-list v-if="guest">

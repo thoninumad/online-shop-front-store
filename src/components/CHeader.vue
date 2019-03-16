@@ -26,7 +26,7 @@
     </v-btn>
 
     <!-- kolom pencarian di bawah header -->
-    
+
   </v-toolbar>
 
 </template>
@@ -35,7 +35,6 @@
   @import '/css/main.css';
 </style>
 
-</style>
 
 <script>
 import { mapGetters, mapActions } from "vuex";

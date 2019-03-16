@@ -80,6 +80,12 @@ const router = new Router({
       meta : {auth:true}
     },
     {
+      path: '/confirm-order/:invoice_number',
+      name: 'confirm-order',
+      component: () => import( /* webpackChunkName: "my-order" */'./views/ConfirmOrder.vue'),
+      meta : {auth:true}
+    },
+    {
       path: '*',
       redirect: {
           name: 'home'

@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="about">
         <v-container>
-            <h1>This is an about page</h1>
+            <h3>This is an about page</h3>
         </v-container>
     </div>
 </template>

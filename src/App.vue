@@ -45,7 +45,7 @@ export default {
         Register: () => import('@/views/Register.vue'),
         Cart: () => import('@/views/Cart.vue'),
         EditProfile: () => import('@/views/EditProfile.vue'),
-        ChangePassword: () => import('@/views/ChangePassword.vue')
+        ChangePassword: () => import('@/views/ChangePassword.vue'),
     },
     methods : {
         ...mapActions({

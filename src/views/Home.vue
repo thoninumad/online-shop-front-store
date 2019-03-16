@@ -33,16 +33,16 @@
 
     <!-- Bagian product -->
     <v-container grid-list-md class="main-product">
-      <h1 class="main-title">TOP PRODUCT</h1>
+      <h1 class="main-title">RECENT PRODUCT</h1>
 
       <v-layout row wrap>
         <v-flex v-for="(product, index) in products" xs6 lg3 :key="index" >
           <v-card :to="'/product/'+product.slug" color="transparent" height="100%" class="main-card" >
             <v-img :to="'/product/'+product.slug" :src="getImage(product.image)" height="150px" color="transparent"></v-img>
-                  <v-flex xs12 align-center flexbox>
-                    <p class="black--text text-block" v-text="product.name"></p>
-                    <p>Rp. {{product.price.toLocaleString('id-ID')}}</p>
-                  </v-flex>
+            <v-flex xs12 align-center flexbox>
+              <p class="black--text text-block" v-text="product.name"></p>
+              <p>Rp. {{product.price.toLocaleString('id-ID')}}</p>
+            </v-flex>
           </v-card>
         </v-flex>
       </v-layout>
@@ -75,8 +75,7 @@ export default {
   created() {
     let count = 4;
 
-    this.axios
-      .get("/categories/random/" + count)
+    this.axios.get("/categories/random/" + count)
       .then(response => {
         let categories = response.data.data;
         this.categories = categories;
@@ -87,8 +86,7 @@ export default {
       });
 
     count = 8;
-    this.axios
-      .get("products/top/" + count)
+    this.axios.get("products/top/" + count)
       .then(response => {
         let products = response.data.data;
         this.products = products;
@@ -100,6 +98,3 @@ export default {
   }
 };
 </script>
-
-
-

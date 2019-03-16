@@ -20,7 +20,7 @@
                                 <template v-for="category in product.categories" v-key="category.id">{{category.name}}, </template>
                             </td>
                         </tr>
-                        <tr ><th class="text-xs-left">Description</th><td>{{product.description}}</td></tr>
+                        <tr><th class="text-xs-left">Description</th><td><p v-html="product.description">{{product.description}}</p></td></tr>
                     </tbody>
                 </table>
             </v-card>
