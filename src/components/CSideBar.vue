@@ -5,7 +5,11 @@
             <v-btn icon @click="drawer=false">
                 <v-icon color="#000">close</v-icon>
             </v-btn>
+<<<<<<< HEAD
+            <v-toolbar-title class="black--text">LBMM ITS</v-toolbar-title>
+=======
             <v-toolbar-title class="black--text">PIPPO</v-toolbar-title>
+>>>>>>> 9c721a65e71b103eaf2b2e24464437010525f073
         </v-toolbar>
 
         <v-list v-if="guest">
@@ -67,9 +71,9 @@ export default {
         //variabel berisi daftar menu navigasi aplikasi
         items :[
             {title: 'Home', icon: 'dashboard', route: 'home'},
-            {title: 'Profile', icon: 'person', route: 'profile', auth: true},
-            {title: 'My Order', icon: 'shop_two', route: 'my-order', auth: true},
-            {title: 'About', icon: 'question_answer', route: 'about'},
+            {title: 'Profil', icon: 'person', route: 'profile', auth: true},
+            {title: 'Order Saya', icon: 'shop_two', route: 'my-order', auth: true},
+            {title: 'Tentang Kami', icon: 'question_answer', route: 'about'},
         ]
     }),
     computed : {

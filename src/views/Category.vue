@@ -11,7 +11,7 @@
                 </v-layout>
               </v-container>
             </v-img>
-            <v-subheader>Products by "{{category.name}}" category"</v-subheader>
+            <v-subheader>Produk berdasarkan kategori "{{category.name}}""</v-subheader>
 
             <v-layout row wrap>
         <v-flex v-for="(product, index) in products" xs6 lg3 :key="index" >

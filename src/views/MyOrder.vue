@@ -46,7 +46,11 @@
                     </v-list>
                   </v-card>
               </v-tab-item>
+<<<<<<< HEAD
+              <v-tab :key="3">Riwayat</v-tab>
+=======
               <v-tab :key="3">History</v-tab>
+>>>>>>> 9c721a65e71b103eaf2b2e24464437010525f073
               <v-tab-item :key="3">
                   <v-card flat>
                     <v-subheader>Riwayat Pemesanan</v-subheader>

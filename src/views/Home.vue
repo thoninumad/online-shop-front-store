@@ -33,7 +33,11 @@
 
     <!-- Bagian product -->
     <v-container grid-list-md class="main-product">
+<<<<<<< HEAD
+      <h1 class="main-title">PRODUK TERLARIS</h1>
+=======
       <h1 class="main-title">RECENT PRODUCT</h1>
+>>>>>>> 9c721a65e71b103eaf2b2e24464437010525f073
 
       <v-layout row wrap>
         <v-flex v-for="(product, index) in products" xs6 lg3 :key="index" >

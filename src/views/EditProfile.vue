@@ -4,7 +4,7 @@
             <v-btn icon dark @click="close">
                 <v-icon>close</v-icon>
             </v-btn>
-            <v-toolbar-title>Edit Profile</v-toolbar-title>
+            <v-toolbar-title>Edit Profil</v-toolbar-title>
         </v-toolbar>
         <v-divider></v-divider>
 
@@ -26,7 +26,7 @@
 
                 <div class="text-xs-center">
                     <v-btn large color="#bd1544" class="white--text" @click="update">
-                        simpan
+                        Simpan
                     </v-btn>
                 </div>
             </v-form>

@@ -44,10 +44,10 @@
             //variabel link halaman yang ingin ditampilkan
             links : [
                 {title: 'Home', route: 'home'},
-                {title: 'About Us', route: 'about'},
-                {title: 'Team', route: 'team'},
-                {title: 'Services', route: 'services'},
-                {title: 'Contact Us', route: 'contact'},
+                {title: 'Tentang Kami', route: 'about'},
+                {title: 'Tim Kami', route: 'team'},
+                {title: 'Layanan', route: 'services'},
+                {title: 'Hubungi Kami', route: 'contact'},
             ]
         }),
         computed : {

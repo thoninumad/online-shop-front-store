@@ -1,7 +1,31 @@
 <template>
     <div class="about">
         <v-container>
+<<<<<<< HEAD
+            <div class="hero-image"> </div>
+            <h1 style="text-align: center;">&nbsp;</h1>
+            <h1 style="text-align: center;">&nbsp;</h1>
+            <h1 style="text-align: center;"><img src="https://i.imgur.com/kYJlWYQ.png" alt="Logo ITS" width="300" height="161" />&nbsp;</h1>
+            <h1 style="text-align: center;"><span style="color: #336799;"><strong>Science</strong></span></h1>
+            <h1 style="text-align: center;"><span style="color: #336799;"><strong>Technopark</strong></span></h1>
+            <h1 style="text-align: center;"><span style="color: #336799;"><strong>Otomotif</strong></span></h1>
+            <p>&nbsp;</p>
+            <p style="text-align: justify;">&emsp; STP ITS adalah lembaga yang mendukung inovasi dan komersialisasi teknologi, pengembangan kreasi usaha dan lapangan kerja dan pengembangan ekonomi dari hasil hilirisasi riset oleh dosen dan mahasiswa.&nbsp; STP memiliki tujuh fokus, diantaranya industri otomotif, kemaritiman, industri kreatif , Permukiman dan lingkungan, ICT dan Nano teknologi yang tergabung dalam Science Technopark (STP). STP di ITS berfungsi menjembatani&nbsp; riset perguruan tinggi dengan dunia industri. Di dalam STP, riset yang dijalankan di ITS akan dikembangkan dan ditumbuhkan dalam bentuk perusahaan pemula berbasis teknologi (spin off). Sehingga, terbentuk ekosistem inovasi dengan aktor utama quadruple helix, yakni akademik, bisnis, pemerintah dan masyarakat. Program otomotif-its sendiri merupakan salah satu kegiatan yang dibina oleh STP bidang otomotif. Dalam hal ini STP Otomotif bertindak sebagai penyandang dana dan induk kelembagaan.</p>
+            <p style="text-align: justify;">&nbsp;</p>
+            <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/NT10FF1.png" alt="Logo Departemen Teknik Mesin ITS " width="300" height="225" /></p>
+            <p style="text-align: justify;">&emsp; Departemen Teknik Mesin ITS berada di bawah Fakultas Teknologi Industri ITS. Demi menjalankan misi yaitu &lsquo;Menyelenggarakan program Pendidikan Teknik Mesin untuk menghasilkan lulusan yang mampu bersaing di pasar global, melaksanakan penelitian dan mempublikasikan hasil penelitian bidang keilmuan Teknik Mesin yang berkualitas dalam forum nasional, regional maupun internasional, serta menerapkan hasil penelitian untuk membantu memecahkan masalah industri dan masyarakat&rsquo;, pada tahun 2010 telah dicanangkan bahwa pengembangan pendidikan, penelitian dan pengabdian kepada masyarakat dilakukan dengan lebih memberdayakan dan mengedepankan peran laboratorium sesuai dengan konsep lab-based education. Departemen Teknik Mesin ITS dalam program otomotif-its ini bertindak sebagai penyandang dana bersama-sama dengan STP Otomotif ITS namun tidak menjadi induk struktural.</p>
+            <p style="text-align: justify;">&nbsp;</p>
+            <p style="text-align: center;"><img src="https://i.imgur.com/pUfkoDT.png" alt="Logo LBMM ITS" width="300" height="197" /></p>
+            <p style="text-align: justify;">&emsp; Lembaga Bengkel Mahasiswa Mesin ITS (LBMM ITS) adalah lembaga yang didirikan pada tanggal 27 Mei 1990 di Departemen Teknik Mesin ITS oleh sejumlah mahasiswa yang mempunyai hobi dan minat dalam bidang otomotif. Lembaga Bengkel Mahasiswa Mesin sendiri bergerak dalam bidang PENELITIAN, PEMBINAAN, PENGEMBANGAN, DAN PELAYANAN MASYARAKAT dalam bidang otomotif. LBMM ITS pada program otomotif-its ini berperan sebagai eksekutif untuk seluruh kegiatan dalam cakupan otomotif-its.</p>
+            <p style="text-align: justify;">&nbsp;</p>
+            <p><strong>XENDIT</strong></p>
+            <p><a href="https://xendit.github.io/xendit-dashboard-docs/invoices.html">https://xendit.github.io/xendit-dashboard-docs/invoices.html</a></p>
+            <p>no rek Bni 0605280435 an roze windu Yuni Syarah</p>
+            <p style="text-align: justify;">&nbsp;</p>
+            <p>&nbsp;</p>
+=======
             <h3>This is an about page</h3>
+>>>>>>> 9c721a65e71b103eaf2b2e24464437010525f073
         </v-container>
     </div>
 </template>

@@ -2,7 +2,7 @@
     <div class="about main">
         <v-container>
             <v-layout fill-height justify-center>
-                <v-subheader style="font-size:35px;">My Profile</v-subheader>
+                <v-subheader style="font-size:35px;">Profil Saya</v-subheader>
             </v-layout>
             
             <v-layout fill-height justify-center style="margin-top:30px;">
@@ -31,10 +31,10 @@
 
             <div class="text-xs-left">
                 <v-btn color="primary" @click="editProfile()">
-                    Edit Profile <v-icon right dark>edit</v-icon>
+                    Edit Profil <v-icon right dark>edit</v-icon>
                 </v-btn>
                 <v-btn color="warning" @click="changePassword()">
-                    Change Password <v-icon right dark>vpn_key</v-icon>
+                    Ubah Password <v-icon right dark>vpn_key</v-icon>
                 </v-btn>
             </div>
         </v-container>

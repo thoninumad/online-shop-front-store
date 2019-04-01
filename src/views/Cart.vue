@@ -5,7 +5,7 @@
                 <v-icon>close</v-icon>
             </v-btn>
 
-            <v-toolbar-title>Your Shopping Cart</v-toolbar-title>
+            <v-toolbar-title>Keranjang Belanja Anda</v-toolbar-title>
             <v-spacer/>
         </v-toolbar>
         <div v-if="countCart===0">
@@ -46,7 +46,7 @@
             <v-card>
                 <v-layout row wrap>
                     <v-flex xs6 text-xs-center>
-                        Total Price ({{totalQuantity}} items)
+                        Harga Total ({{totalQuantity}} items)
                         <div class="title">{{totalPrice.toLocaleString('id-ID')}}</div>
                     </v-flex>
                     <v-flex xs6 text-xs-center>

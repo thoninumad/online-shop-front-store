@@ -1,13 +1,13 @@
 <template>
     <div class="checkout" style="margin-top:65px;">
-        <v-subheader class="sub-title">Shipping Address</v-subheader>
+        <v-subheader class="sub-title">Alamat Pengiriman</v-subheader>
         <div>
             <v-card flat>
                 <v-container>
                     <v-form ref="form" lazy-validation>
-                        <v-text-field label="Name" v-model="name" :counter="100" required append-icon="person"></v-text-field>
-                        <v-textarea label="Address" v-model="address" :counter="200" required auto-grow rows="3"></v-textarea>
-                        <v-text-field label="Phone" v-model="phone" :counter="12" required append-icon="phone"></v-text-field>
+                        <v-text-field label="Nama" v-model="name" :counter="100" required append-icon="person"></v-text-field>
+                        <v-textarea label="Alamat" v-model="address" :counter="200" required auto-grow rows="3"></v-textarea>
+                        <v-text-field label="No HP" v-model="phone" :counter="12" required append-icon="phone"></v-text-field>
                         <v-select v-model="province_id" :items="provinces" item-text="province" item-value="id" label="Province"
                         persistent-hint single-line></v-select>
                         <v-select v-model="city_id" v-if="province_id>0" :items="citiesByProvince" item-text="city_name" item-value="id" label="City"
@@ -16,14 +16,14 @@
                     <v-card-actions>
                         <v-btn block color="#bd1544" dark @click="saveShipping">
                             <v-icon>save</v-icon> &nbsp;
-                            Save
+                            Simpan
                         </v-btn>
                     </v-card-actions>
                 </v-container>
             </v-card>
         </div>
 
-        <v-subheader class="sub-title">Your Shopping Cart</v-subheader>
+        <v-subheader class="sub-title">Keranjang Belanja Anda</v-subheader>
         <div v-if="countCart>0">
             <v-card flat>
                 <v-list two-line>
@@ -58,7 +58,7 @@
             </v-card>
         </div>
 
-        <v-subheader class="sub-title">Courier</v-subheader>
+        <v-subheader class="sub-title">Kurir</v-subheader>
         <div>
             <v-card flat>
                 <v-container>
@@ -81,13 +81,12 @@
             <v-container>
                 <v-layout row wrap>
                     <v-flex xs12 text-xs-center>
-                        Total Bill ({{totalQuantity}} items)
+                        Tagihan Total ({{totalQuantity}} items)
                         <div class="title">Rp.{{totalBill.toLocaleString('id-ID')}}</div>
                     </v-flex>
                     <v-flex xs12 text-xs-center>
                         <v-btn style="margin:30px 0px;" block color="#bd1544" dark @click="dialogConfirm=true" :disabled="totalBill==0">
-                            <v-icon class="white--text">attach_money</v-icon> &nbsp;
-                            Pay
+                            Bayar
                         </v-btn>
                     </v-flex>
                 </v-layout>
@@ -98,12 +97,12 @@
             <v-layout row justify-center>
                 <v-dialog v-model="dialogConfirm" persistent max-width="290">
                     <v-card>
-                        <v-card-title class="headline">Confirmation!</v-card-title>
-                        <v-card-text>If you continue, transaction will be processed</v-card-text>
+                        <v-card-title class="headline">Konfirmasi!</v-card-title>
+                        <v-card-text>Jika anda melanjutkan, transaksi akan diproses</v-card-text>
                         <v-card-actions>
                             <v-spacer></v-spacer>
                             <v-btn color="green darken-1" flat @click="cancel">Cancel</v-btn>
-                            <v-btn color="green darken-1" flat @click="pay">Continue</v-btn>
+                            <v-btn color="green darken-1" flat @click="pay">Lanjutkan</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-dialog>

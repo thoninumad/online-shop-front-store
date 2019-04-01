@@ -8,7 +8,9 @@
     </v-btn>
 
     <!-- header bagian tengah -->
+    <a href="/">
     <img class="main-logo" src="/img/icons/logo-128.png" alt="">
+    </a>
 
     <!-- separator supaya header bagian kanan posisinya rata kanan -->
     <v-spacer></v-spacer>

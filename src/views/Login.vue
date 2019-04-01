@@ -4,7 +4,7 @@
             <v-btn icon  @click="close">
                 <v-icon>close</v-icon>
             </v-btn>
-            <v-toolbar-title>Login and Start Shopping!</v-toolbar-title>
+            <v-toolbar-title>Login dan Mulai Berbelanja!</v-toolbar-title>
         </v-toolbar>
         <v-divider></v-divider>
 

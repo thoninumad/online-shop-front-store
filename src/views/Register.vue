@@ -4,7 +4,7 @@
             <v-btn icon @click.native="close">
                 <v-icon>close</v-icon>
             </v-btn>
-            <v-toolbar-title>Register and Start Shopping!</v-toolbar-title>
+            <v-toolbar-title>Daftar and Mulai Belanja!</v-toolbar-title>
         </v-toolbar>
         <v-divider></v-divider>
 

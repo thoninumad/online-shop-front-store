@@ -2,7 +2,7 @@
     <div>
         <v-container grid-list-md>
             <v-subheader>
-                All Category
+                Semua Kategori
             </v-subheader>
 
             <v-layout row wrap>
@@ -20,7 +20,7 @@
 
                         <v-card-actions>
                             <v-spacer></v-spacer>
-                            <v-btn>See Category</v-btn>
+                            <v-btn>Lihat Kategori</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-flex>
