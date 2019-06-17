@@ -2,7 +2,7 @@
     <div class="main category">
         <v-container grid-list-md>
 
-            <v-img v-if="category.image" :src="getImage(category.image)" height="300px">
+            <v-img v-if="category.image" :src="'https://dashboard.otomotif-its.id/storage/'+category.image" height="300px">
               <v-container fill-height fluid pa-2>
                 <v-layout fill-height align-center>
                   <v-flex xs12 align-end flexbox class="catagory-content">
@@ -16,7 +16,7 @@
             <v-layout row wrap>
         <v-flex v-for="(product, index) in products" xs6 lg3 :key="index" >
           <v-card :to="'/product/'+product.slug" color="transparent" height="100%" class="main-card" >
-            <v-img :to="'/product/'+product.slug" :src="getImage(product.image)" height="150px" color="transparent"></v-img>
+            <v-img :to="'/product/'+product.slug" :src="'https://dashboard.otomotif-its.id/storage/'+product.image" height="150px" color="transparent"></v-img>
                   <v-flex xs12 align-center flexbox>
                     <p class="black--text text-block" v-text="product.name"></p>
                     <p>Rp. {{product.price.toLocaleString('id-ID')}}</p>
@@ -63,6 +63,7 @@
                       this.lengthPage = category.products.last_page
                   })
                   .catch((error) => {
+                      // eslint-disable-next-line
                       console.log(error.response)
                   })
             },

@@ -4,7 +4,7 @@
       <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src" >
         <v-layout fill-height justify-center align-center>
           <div class="desc-header">
-            <h2>Selamat datang di LBMM ITS</h2>
+            <h2>Selamat datang di STP Otomotif ITS</h2>
             <h1>pusatnya alat-alat keren</h1>
             <v-btn color="#bd1544" class="white--text" large depressed to="/products">Lihat Katalog</v-btn>
           </div>
@@ -17,7 +17,7 @@
       <v-layout row wrap fill-height justify-center align-center>
         <v-flex v-for="category in categories" xs6 lg3 :key="category.id">
           <v-card :to="'/category/'+category.slug" class="card-random" elevation="0">
-            <v-img :src="getImage(category.image)" height="190px" class="img-category">
+            <v-img :src="'https://dashboard.otomotif-its.id/storage/'+category.image" height="190px" class="img-category">
               <v-container fill-height fluid pa-2>
                 <v-layout fill-height align-center>
                   <v-flex xs12 align-end flexbox class="catagory-content">
@@ -33,16 +33,14 @@
 
     <!-- Bagian product -->
     <v-container grid-list-md class="main-product">
-<<<<<<< HEAD
-      <h1 class="main-title">PRODUK TERLARIS</h1>
-=======
-      <h1 class="main-title">RECENT PRODUCT</h1>
->>>>>>> 9c721a65e71b103eaf2b2e24464437010525f073
+
+      <h1 class="main-title">PRODUK TERBARU</h1>
 
       <v-layout row wrap>
         <v-flex v-for="(product, index) in products" xs6 lg3 :key="index" >
-          <v-card :to="'/product/'+product.slug" color="transparent" height="100%" class="main-card" >
-            <v-img :to="'/product/'+product.slug" :src="getImage(product.image)" height="150px" color="transparent"></v-img>
+          <v-card :to="'/product/'+product.slug" color="transparent" height="100%" class="main-card">
+            <v-img :to="'/product/'+product.slug" :src="'https://dashboard.otomotif-its.id/storage/'+product.image" height="150px" color="transparent"></v-img>
+            <!-- <v-img :to="'/product/'+product.slug" :src="getImage(product.image)" height="150px" color="transparent"></v-img> -->
             <v-flex xs12 align-center flexbox>
               <p class="black--text text-block" v-text="product.name"></p>
               <p>Rp. {{product.price.toLocaleString('id-ID')}}</p>
@@ -86,6 +84,7 @@ export default {
       })
       .catch(error => {
         let responses = error.response;
+        // eslint-disable-next-line
         console.log(responses);
       });
 
@@ -97,6 +96,7 @@ export default {
       })
       .catch(error => {
         let responses = error.response;
+        // eslint-disable-next-line
         console.log(responses);
       });
   }

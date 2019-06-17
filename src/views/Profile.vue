@@ -4,7 +4,7 @@
             <v-layout fill-height justify-center>
                 <v-subheader style="font-size:35px;">Profil Saya</v-subheader>
             </v-layout>
-            
+
             <v-layout fill-height justify-center style="margin-top:30px;">
                 <v-avatar :tile="false" :size="180">
                     <img v-if="user.avatar" :src="getImage(user.avatar)">
@@ -17,7 +17,7 @@
             </v-layout>
 
             <v-card flat>
-                <table class="v-datatable v-table table-hover">
+                <table cellpadding="20" cellspacing="20" class="v-datatable v-table table-hover">
                     <tbody>
                         <tr style="border-bottom:1px solid #ddd"><th class="text-xs-left">Email</th><td>{{user.email}}</td></tr>
                         <tr style="border-bottom:1px solid #ddd"><th class="text-xs-left">Username</th><td>{{user.username}}</td></tr>

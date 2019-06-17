@@ -12,8 +12,8 @@
 
                 <!-- deskripsi aplikasi -->
                 <v-card-text v-if="isHome" class="black--text pt-0">
-                    Pusat Inovasi dan Pengujian Produk Otomotif <br>
-                    Lembaga Bengkel Mahasiswa Mesin  <br>
+                    Science Techno Park Otomotif <br>
+                    Institut Teknologi Sepuluh Nopember  <br>
                     Kampus ITS Sukolilo, Surabaya 60111
                 </v-card-text>
 
@@ -23,7 +23,7 @@
 
                     <!-- teks copyright -->
                     <v-flex secondary darken-2 py-3 text-xs-center white--text xs12>
-                        &copy; 2019 - PIPPO LBMM ITS
+                        &copy; 2019 - STP Otomotif ITS
                     </v-flex>
                 </v-layout>
             </v-card>

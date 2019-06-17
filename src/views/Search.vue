@@ -21,7 +21,7 @@
             <template v-for="(item) in items">
                 <v-list-tile :key="item.id" avatar @click="close" :to="'/product/'+item.slug">
                     <v-list-tile-avatar>
-                        <img :src="getImage(item.image)">
+                        <img :src="'https://dashboard.otomotif-its.id/storage/'+item.image">
                     </v-list-tile-avatar>
                     <v-list-tile-content>
                         <v-list-tile-title v-html="item.name"></v-list-tile-title>
@@ -62,6 +62,7 @@ export default {
                     this.items = products
                 })
                 .catch((error) => {
+                    // eslint-disable-next-line
                     console.log(error)
                 })
             }

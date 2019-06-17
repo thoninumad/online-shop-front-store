@@ -3,7 +3,7 @@
         <v-subheader class="sub-title">Informasi Pembayaran</v-subheader>
         <v-card flat>
             <v-container>
-                <table class="v-datatable v-table table-hover">
+                <table cellpadding="20" cellspacing="20" class="v-datatable v-table table-hover">
                     <tbody>
                         <tr style="border-bottom:1px solid #ddd"><th class="column text-xs-left">Order ID</th><td>{{payment.order_id}}</td></tr>
                         <tr style="border-bottom:1px solid #ddd"><th class="column text-xs-left">Nomor Invoice</th><td>{{payment.invoice_number}}</td></tr>
@@ -16,10 +16,10 @@
         <v-subheader class="sub-title">Transfer Kepada</v-subheader>
         <v-card flat>
             <v-container>
-                <table class="v-datatable v-table table-hover">
+                <table cellpadding="20" cellspacing="20" class="v-datatable v-table table-hover">
                     <tbody>
                         <tr>
-                            <td><img src="https://i.imgur.com/lzzzVtw.png" alt="BNI"></td>
+                            <td><img src="img/logo-bni.png" alt="BNI"></td>
                             <td>BANK BNI - <strong>Roze Windu Yuni Syarah</strong> (No. Rek 0605280435)</td>
                         </tr>
                     </tbody>

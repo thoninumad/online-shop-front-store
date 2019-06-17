@@ -6,7 +6,7 @@
             <v-layout row wrap>
                 <v-flex v-for="(product, index) in products" xs6 lg3 :key="index" >
                     <v-card :to="'/product/'+product.slug" color="transparent" height="100%" class="main-card" >
-                        <v-img :to="'/product/'+product.slug" :src="getImage(product.image)" height="150px" color="transparent">
+                        <v-img :to="'/product/'+product.slug" :src="'https://dashboard.otomotif-its.id/storage/'+product.image" height="150px" color="transparent">
                         </v-img>
                             <v-flex xs12 align-center flexbox>
                                 <p class="black--text text-block" v-text="product.name"></p>
@@ -51,6 +51,7 @@
                       this.products = products
                   })
                   .catch((error) => {
+                      // eslint-disable-next-line
                       console.log(error.response)
                   })
             },

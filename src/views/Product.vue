@@ -5,11 +5,11 @@
                 <p class="main-title">{{product.name}}</p>
             </v-layout>
             <v-layout fill-height justify-center>
-                <v-img v-if="product.image" :src="getImage(product.image)" max-width="300"></v-img>
+                <v-img v-if="product.image" :src="'https://dashboard.otomotif-its.id/storage/'+product.image" max-width="300"></v-img>
             </v-layout>
             <v-subheader style="margin-top:60px;">Informasi</v-subheader>
             <v-card flat>
-                <table class="v-datatable v-table table-hover">
+                <table cellpadding="20" cellspacing="20" class="v-datatable v-table table-hover">
                     <tbody>
                         <tr style="border-bottom:1px solid #ddd"><th class="text-xs-left">Produsen</th><td>{{product.producer}}</td></tr>
                         <tr style="border-bottom:1px solid #ddd"><th class="text-xs-left">Harga</th><td v-if="product.price">Rp. {{product.price.toLocaleString('id-ID')}}</td></tr>
@@ -20,11 +20,8 @@
                                 <template v-for="category in product.categories" v-key="category.id">{{category.name}}, </template>
                             </td>
                         </tr>
-<<<<<<< HEAD
-                        <tr ><th class="text-xs-left">Deskripsi</th><td><p v-html="product.description">{{product.description}}</p></td></tr>
-=======
-                        <tr><th class="text-xs-left">Description</th><td><p v-html="product.description">{{product.description}}</p></td></tr>
->>>>>>> 9c721a65e71b103eaf2b2e24464437010525f073
+                        <tr><th class="text-xs-left">Deskripsi</th><td><p v-html="product.description">{{product.description}}</p></td></tr>
+
                     </tbody>
                 </table>
             </v-card>
@@ -73,6 +70,7 @@ export default {
           })
           .catch((error) => {
               let responses = error.response
+              // eslint-disable-next-line
               console.log(responses)
           })
     }

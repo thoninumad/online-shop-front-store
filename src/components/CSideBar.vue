@@ -5,11 +5,9 @@
             <v-btn icon @click="drawer=false">
                 <v-icon color="#000">close</v-icon>
             </v-btn>
-<<<<<<< HEAD
-            <v-toolbar-title class="black--text">LBMM ITS</v-toolbar-title>
-=======
-            <v-toolbar-title class="black--text">PIPPO</v-toolbar-title>
->>>>>>> 9c721a65e71b103eaf2b2e24464437010525f073
+
+            <v-toolbar-title class="black--text">STP OTOMOTIF ITS</v-toolbar-title>
+
         </v-toolbar>
 
         <v-list v-if="guest">

@@ -8,7 +8,7 @@
             <v-layout row wrap>
                 <v-flex v-for="category in categories" xs6 lg3 :key="category.id">
                     <v-card :to="'/category/'+category.slug">
-                        <v-img v-if="category.image" :src="getImage(category.image)" height="150px">
+                        <v-img v-if="category.image" :src="'https://dashboard.otomotif-its.id/storage/'+category.image" height="150px">
                             <v-container fill-height fluid pa-2>
                                 <v-layout fill-height>
                                     <v-flex xs12 align-end flexbox>
@@ -61,6 +61,7 @@
                       this.categories = categories
                   })
                   .catch((error) => {
+                      // eslint-disable-next-line
                       console.log(error.response)
                   })
             },
